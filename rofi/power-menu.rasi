@@ -53,7 +53,7 @@ element {
 
 element selected {
     background-color: #000000;
-    text-color: #00ff88;
+    text-color: #c34a36;
 }
 
 element-text {
