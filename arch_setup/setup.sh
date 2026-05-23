@@ -43,7 +43,7 @@ print_banner() {
     clear
     echo -e "${BOLD}${BLUE}"
     echo "  ╔══════════════════════════════════════════════════════════════╗"
-    echo "  ║         ARCH LINUX — AUTOMATED POST-INSTALL SETUP           ║"
+    echo "  ║         ARCH LINUX — AUTOMATED POST-INSTALL SETUP            ║"
     echo "  ╚══════════════════════════════════════════════════════════════╝"
     echo -e "${NC}"
 }
@@ -148,14 +148,14 @@ for num in "${SELECTED[@]}"; do
     echo -e "${DIM}  ════════════════════════════════════════════════════════════${NC}"
 
     # Snapshot results count before running module
-    before_ok=$(grep -c "^OK:" "$RESULTS_FILE" 2>/dev/null || echo 0)
-    before_fail=$(grep -c "^FAIL:" "$RESULTS_FILE" 2>/dev/null || echo 0)
+    before_ok=$(grep "^OK:" "$RESULTS_FILE" 2>/dev/null | wc -l)
+    before_fail=$(grep "^FAIL:" "$RESULTS_FILE" 2>/dev/null | wc -l)
 
     # Run the module in a subshell so failures never kill the orchestrator
     bash "$file" || true
 
-    after_ok=$(grep -c "^OK:" "$RESULTS_FILE" 2>/dev/null || echo 0)
-    after_fail=$(grep -c "^FAIL:" "$RESULTS_FILE" 2>/dev/null || echo 0)
+    after_ok=$(grep "^OK:" "$RESULTS_FILE" 2>/dev/null | wc -l)
+    after_fail=$(grep "^FAIL:" "$RESULTS_FILE" 2>/dev/null | wc -l)
 
     mod_ok=$(( after_ok - before_ok ))
     mod_fail=$(( after_fail - before_fail ))
@@ -166,13 +166,13 @@ done
 sudo rm -f /etc/sudoers.d/arch_setup_tmp
 
 # ─── Final report ────────────────────────────────────────────────────────────
-TOTAL_OK=$(grep -c "^OK:"   "$RESULTS_FILE" 2>/dev/null || echo 0)
-TOTAL_FAIL=$(grep -c "^FAIL:" "$RESULTS_FILE" 2>/dev/null || echo 0)
-TOTAL_WARN=$(grep -c "^WARN:" "$RESULTS_FILE" 2>/dev/null || echo 0)
+TOTAL_OK=$(grep "^OK:"   "$RESULTS_FILE" 2>/dev/null | wc -l)
+TOTAL_FAIL=$(grep "^FAIL:" "$RESULTS_FILE" 2>/dev/null | wc -l)
+TOTAL_WARN=$(grep "^WARN:" "$RESULTS_FILE" 2>/dev/null | wc -l)
 
 echo ""
 echo -e "${BOLD}${BLUE}  ╔══════════════════════════════════════════════════════════════╗${NC}"
-echo -e "${BOLD}${BLUE}  ║                     SETUP COMPLETE                          ║${NC}"
+echo -e "${BOLD}${BLUE}  ║                     SETUP COMPLETE                           ║${NC}"
 echo -e "${BOLD}${BLUE}  ╚══════════════════════════════════════════════════════════════╝${NC}"
 echo ""
 
