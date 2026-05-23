@@ -20,7 +20,7 @@
     # Pywal colors
     background = "#000000"
     foreground = "#ffffff"
-    frame_color = "#00ff88"
+    frame_color = "#000000"
 
 
     [urgency_low]
