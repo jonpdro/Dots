@@ -1,0 +1,97 @@
+configuration {
+    modi: "drun,run";
+    show-icons: false;
+    terminal: "kitty";
+    font: "JetBrains Mono Nerd Font Bold 13";
+    drun-display-format: "{name}";
+    lines: 8;
+
+    kb-mode-complete: "";
+    kb-remove-to-eol: "";
+    kb-row-up: "Up,K";
+    kb-row-down: "Down,J";
+    kb-accept-entry: "Return";
+    kb-remove-char-back: "";
+    kb-remove-char-forward: "";
+    kb-remove-word-back: "";
+    kb-remove-word-forward: "";
+    kb-page-prev: "";
+    kb-page-next: "";
+    kb-element-next: "Tab";
+    kb-element-prev: "Shift+Tab";
+    kb-cancel: "Escape";
+    kb-custom-1: "F1";
+}
+
+* {
+    border-colour: #ffffff;
+    background-colour: #000000;
+    text-colour: #ffffff;
+    accent-colour: #ffffff;
+    selected-background-colour: #333333;
+    selected-text-colour: #000000;
+}
+
+window {
+    width: 350;
+    height: 300;
+    border: 0px;
+    border-radius: 8px;
+    padding: 8px;
+    background-color: #000000;
+}
+
+mainbox {
+    spacing: 0px;
+    padding: 0px;
+    children: [listview];
+    background-color: transparent;
+}
+
+listview {
+    spacing: 0px;
+    padding: 0px;
+    dynamic: true;
+    scrollbar: false;
+    fixed-height: true;
+    background-color: transparent;
+}
+
+element {
+    padding: 12px 12px;
+    border-radius: 2px;
+    background-color: #000000;
+    text-color: #ffffff;
+}
+
+element selected.normal {
+    background-color: transparent;
+    text-color: #00ff88;
+}
+
+element selected.active {
+    background-color: transparent;
+    text-color: #000000;
+}
+
+element selected.urgent {
+    background-color: transparent;
+    text-color: #000000;
+}
+
+element normal.active {
+    background-color: #000000;
+    text-color: #ffffff;
+}
+
+element normal.urgent {
+    background-color: #000000;
+    text-color: #ffffff;
+}
+
+element-text {
+    vertical-align: 0.5;
+    text-color: inherit;
+    font: "JetBrains Mono Nerd Font Bold 13";
+    background-color: transparent;
+}

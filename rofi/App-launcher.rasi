@@ -1,0 +1,107 @@
+configuration {
+    modi: "drun,run";
+    show-icons: false;
+    terminal: "kitty";
+    font: "JetBrains Mono Nerd Font Bold 13";
+    drun-display-format: "{name}";
+    lines: 8;
+}
+
+* {
+    border-colour: #ffffff;
+    background-colour: #000000;
+    text-colour: #ffffff;
+    accent-colour: #ffffff;
+    selected-background-colour: #333333;
+    selected-text-colour: #000000;
+}
+
+window {
+    width: 350;
+    height: 300;
+    border: 0px;
+    border-radius: 8px;
+    padding: 8px;
+    background-color: #000000;
+}
+
+mainbox {
+    spacing: 0px;
+    padding: 0px;
+    children: [inputbar, listview];
+    background-color: transparent;
+}
+
+inputbar {
+    spacing: 0px;
+    padding: 12px;
+    border: 0px;
+    border-color: #ffffff;
+    children: [textbox-prompt-colon, entry];
+    background-color: transparent;
+}
+
+textbox-prompt-colon {
+    expand: false;
+    str: "󰣇 ";
+    padding: 0px 12px 0px 0px;
+    text-color: #00ff88;
+    font: "JetBrains Mono Nerd Font Bold 13";
+    background-color: transparent;
+}
+
+entry {
+    placeholder: "Search Applications...";
+    placeholder-color: #ffffff;
+    text-color: #ffffff;
+    font: "JetBrains Mono Nerd Font 13";
+    background-color: transparent;
+}
+
+listview {
+    spacing: 0px;
+    padding: 0px;
+    dynamic: true;
+    scrollbar: false;
+    fixed-height: true;
+    background-color: transparent;
+}
+
+element {
+    padding: 12px 12px;
+    border-radius: 2px;
+    background-color: #000000;
+    text-color: #ffffff;
+}
+
+element selected.normal {
+    background-color: transparent;
+    text-color: #00ff88;
+}
+
+element selected.active {
+    background-color: transparent;
+    text-color: #000000;
+}
+
+element selected.urgent {
+    background-color: transparent;
+    text-color: #000000;
+}
+
+element normal.active {
+    background-color: #000000;
+    text-color: #ffffff;
+}
+
+element normal.urgent {
+    background-color: #000000;
+    text-color: #ffffff;
+}
+
+element-text {
+    vertical-align: 0.5;
+    text-color: inherit;
+    font: "JetBrains Mono Nerd Font Bold 13";
+    background-color: transparent;
+}
