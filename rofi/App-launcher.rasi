@@ -45,7 +45,7 @@ textbox-prompt-colon {
     expand: false;
     str: "󰣇 ";
     padding: 0px 12px 0px 0px;
-    text-color: #00ff88;
+    text-color: #c34a36;
     font: "JetBrains Mono Nerd Font Bold 13";
     background-color: transparent;
 }
@@ -76,7 +76,7 @@ element {
 
 element selected.normal {
     background-color: transparent;
-    text-color: #00ff88;
+    text-color: #c34a36;
 }
 
 element selected.active {
