@@ -66,7 +66,7 @@ element {
 
 element selected.normal {
     background-color: transparent;
-    text-color: #00ff88;
+    text-color: #c34a36;
 }
 
 element selected.active {
