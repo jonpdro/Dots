@@ -7,7 +7,7 @@
 -- B      : reset markers
 -- k      : move cursor forward
 -- j      : move cursor backward
--- SPACE  : insert/remove marker(*) automatically
+-- SPACE  : insert/remove marker automatically
 -- h      : place/remove trim_right marker (delete everything after cursor)
 -- H      : place/remove trim_left  marker (delete everything before cursor)
 -- ENTER  : confirm + copy to clipboard
@@ -184,6 +184,10 @@ local function red(text)
     return "{\\c&H0000FF&}" .. text .. "{\\c}"
 end
 
+local function yellow(text)
+    return "{\\c&H00FFFF&}" .. text .. "{\\c}"
+end
+
 -------------------------------------------------------------------------------
 -- Marker helpers
 -------------------------------------------------------------------------------
@@ -288,7 +292,7 @@ local function build_ass_display()
             local cursor = ""
 
             if i == cursor_pos then
-                cursor = red("|")
+                cursor = yellow("|")
             end
 
             table.insert(
