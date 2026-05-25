@@ -7,7 +7,9 @@
 -- B      : reset markers
 -- k      : move cursor forward
 -- j      : move cursor backward
--- SPACE  : insert/remove marker automatically
+-- SPACE  : insert/remove marker(*) automatically
+-- h      : place/remove trim_right marker (delete everything after cursor)
+-- H      : place/remove trim_left  marker (delete everything before cursor)
 -- ENTER  : confirm + copy to clipboard
 
 -------------------------------------------------------------------------------
@@ -191,6 +193,10 @@ local function marker_visual(marker)
         return red("[")
     elseif marker == "close" then
         return red("]")
+    elseif marker == "trim_left" then
+        return red("<")
+    elseif marker == "trim_right" then
+        return red(">")
     end
 
     return ""
@@ -200,7 +206,7 @@ local function recompute_expectation()
     local count = 0
 
     for _, marker in pairs(markers) do
-        if marker ~= nil then
+        if marker == "open" or marker == "close" then
             count = count + 1
         end
     end
@@ -235,9 +241,36 @@ local function toggle_marker(idx)
     expecting_close = not expecting_close
 end
 
--------------------------------------------------------------------------------
--- OSD builder
--------------------------------------------------------------------------------
+local function toggle_trim(idx, kind)
+
+    ---------------------------------------------------------------------------
+    -- Remove if same kind already placed here
+    ---------------------------------------------------------------------------
+
+    if markers[idx] == kind then
+        markers[idx] = nil
+        return
+    end
+
+    ---------------------------------------------------------------------------
+    -- Remove any existing trim marker of this kind anywhere
+    ---------------------------------------------------------------------------
+
+    for k, v in pairs(markers) do
+        if v == kind then
+            markers[k] = nil
+        end
+    end
+
+    ---------------------------------------------------------------------------
+    -- Place marker (overwrite open/close if present at same gap)
+    ---------------------------------------------------------------------------
+
+    markers[idx] = kind
+    recompute_expectation()
+end
+
+
 
 local function build_ass_display()
     local segments = {}
@@ -329,13 +362,35 @@ end
 -------------------------------------------------------------------------------
 
 local function build_output()
+
+    ---------------------------------------------------------------------------
+    -- Determine trim boundaries
+    ---------------------------------------------------------------------------
+
+    local first_gap = 1
+    local last_gap  = gap_count()
+
+    for idx, marker in pairs(markers) do
+        if marker == "trim_left" then
+            -- trim_left placed at gap idx: delete everything before this gap
+            local g = idx_to_gap(idx)
+            if g > first_gap then
+                first_gap = g
+            end
+        elseif marker == "trim_right" then
+            -- trim_right placed at gap idx: delete everything after this gap
+            local g = idx_to_gap(idx)
+            if g < last_gap then
+                last_gap = g
+            end
+        end
+    end
+
     local out = {}
 
-    local num_tokens = #tokens
+    local i = gap_to_idx(first_gap)
 
-    local i = 1
-
-    while i <= num_tokens do
+    while i <= gap_to_idx(last_gap) do
 
         -----------------------------------------------------------------------
         -- GAP
@@ -344,11 +399,14 @@ local function build_output()
         local gap    = tokens[i] or ""
         local marker = markers[i]
 
+        -- Suppress the leading whitespace at the trim boundary
+        local is_first = (i == gap_to_idx(first_gap))
+
         if marker == "open" then
-            table.insert(out, gap)
+            table.insert(out, is_first and "" or gap)
             table.insert(out, "*")
         else
-            table.insert(out, gap)
+            table.insert(out, is_first and "" or gap)
         end
 
         -----------------------------------------------------------------------
@@ -357,7 +415,7 @@ local function build_output()
 
         local word_idx = i + 1
 
-        if word_idx <= num_tokens then
+        if word_idx <= gap_to_idx(last_gap) then
             local word  = tokens[word_idx]
             local punct = punct_suffix[word_idx] or ""
 
@@ -491,6 +549,8 @@ local function unregister_mode_keys()
     mp.remove_key_binding("sub-mark-marker-toggle")
     mp.remove_key_binding("sub-mark-confirm")
     mp.remove_key_binding("sub-mark-reset")
+    mp.remove_key_binding("sub-mark-trim-right")
+    mp.remove_key_binding("sub-mark-trim-left")
 end
 
 local function register_mode_keys()
@@ -543,6 +603,32 @@ local function register_mode_keys()
         function()
             toggle_marker(cursor_pos)
 
+            refresh_osd()
+        end
+    )
+
+    ---------------------------------------------------------------------------
+    -- TRIM RIGHT  (h)
+    ---------------------------------------------------------------------------
+
+    mp.add_forced_key_binding(
+        "h",
+        "sub-mark-trim-right",
+        function()
+            toggle_trim(cursor_pos, "trim_right")
+            refresh_osd()
+        end
+    )
+
+    ---------------------------------------------------------------------------
+    -- TRIM LEFT  (H)
+    ---------------------------------------------------------------------------
+
+    mp.add_forced_key_binding(
+        "H",
+        "sub-mark-trim-left",
+        function()
+            toggle_trim(cursor_pos, "trim_left")
             refresh_osd()
         end
     )
@@ -653,4 +739,4 @@ mp.add_key_binding(
             enter_mode()
         end
     end
-) 
+)
