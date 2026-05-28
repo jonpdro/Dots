@@ -1,10 +1,11 @@
 #!/bin/bash
 
-CHOICE=$(echo -e "󰐥\n󰜉\n" | rofi -dmenu -p "" -theme ~/.config/rofi/power-menu.rasi -selected-row 0)
+CHOICE=$(echo -e "󰐥\n󰜉\n󰌾" | rofi -dmenu -p "" -theme ~/.config/rofi/power-menu.rasi -selected-row 0)
 
 case $CHOICE in
     "󰐥")
-        sleep 10 && systemctl poweroff
+        sleep 5 && ddcutil setvcp 0xD6 4 
+        systemctl poweroff
         ;;
     "󰜉")
         sleep 3 && reboot
