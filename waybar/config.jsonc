@@ -5,7 +5,7 @@
   "width": 1920,
   "reload_style_on_change": true,
   
-  "modules-center": ["hyprland/workspaces", "clock" ,"custom/separator", "network", "bluetooth", "tray", "wireplumber"],
+  "modules-center": ["hyprland/workspaces","custom/separator",  "clock" ,"custom/separator", "network", "bluetooth", "tray", "wireplumber"],
 
  "hyprland/workspaces": {
     "disable-scroll": true,
