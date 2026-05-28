@@ -4,10 +4,11 @@ window#waybar {
     background: #000000;
     opacity: 0.98;
     font-family: "JetBrains Mono Nerd Font", monospace;
-    color: #ffffff;
+    color: #EFECE3;
     font-size: 14px;
     font-weight: 600;
-    border: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 16px 16px 0px 0px;
 }
 
 .modules-left,
@@ -35,7 +36,7 @@ margin: 0px 4px;
 border: 3px solid transparent;
 border-radius: 0px;
 background: transparent;
-color: #ffffff;
+color: #9B3922;
 opacity: 0.5;
 }
 
@@ -44,19 +45,20 @@ box-shadow: none;
 text-shadow: none;
 background: transparent;
 transition: none;
-opacity: 1;
+color: #F2613F;
+opacity: 0.7;
 }
 
 #workspaces button.active {
 background: transparent;
-color: #c34a36;
+color: #F2613F;
 opacity: 1;
 font-weight: 800;
 transition: all 0.4s ease-in;
 }
 
 #clock {
-color: #ffffff;
+color: #EFECE3;
 opacity: 1;
 font-weight: 600;
 font-size: 16px;
@@ -64,7 +66,7 @@ font-size: 16px;
 
 #cpu {
 background: transparent;
-color: #ffffff;
+color: #EFECE3;
 margin: 4px 0px 4px 4px;
 border-radius: 2px;
 padding: 2px 6px;
@@ -74,7 +76,7 @@ font-size: 14px;
 
 #memory {
 background: transparent;
-color: #ffffff;
+color: #EFECE3;
 margin: 4px 0px;
 border-radius: 2px;
 padding: 2px 6px;
@@ -87,7 +89,7 @@ background: transparent;
 padding: 0px;
 padding-top: 1px;
 margin: 0px 12px 0px 0px;
-color: #cccccc;
+color: #F2613F;
 font-size: 18px;
 }
 
@@ -96,7 +98,7 @@ background: transparent;
 padding: 0px;
 padding-top: 1px;
 margin: 0px 12px 0px 0px;
-color: #cccccc;
+color: #F2613F;
 font-size: 18px;
 }
 
@@ -110,17 +112,22 @@ border-radius: 0px;
 #wireplumber {
 background: transparent;
 padding: 0px;
-margin: 0px 12px 0px 0px;
-color: #ffffff;
+margin: 0px 16px 0px 0px;
+color: #EFECE3;
 opacity: 1;
 font-weight: 600;
 font-size: 16px;
 }
 
+#wireplumber:hover{
+    color:#F2613F;
+    transition: all 0.6s ease-in;
+}
+
 #custom-leftseparator {
 margin: 0px 4px 0px 0px;
 padding-right: 2px;
-color: #ffffff;
+color: #EFECE3;
 opacity: 1;
 font-weight: 900;
 font-size: 14px;
@@ -130,7 +137,7 @@ background: transparent;
 #custom-rightseparator {
 margin: 0px 4px 0px 0px;
 padding: 0px;
-color: #ffffff;
+color: #EFECE3;
 opacity: 1;
 font-weight: 900;
 font-size: 14px;
@@ -143,6 +150,6 @@ tooltip {
 }
 
 tooltip label {
-    color: #ffffff;
+    color: #EFECE3;
     font-weight: 600;
 }
