@@ -1,0 +1,136 @@
+window#waybar {
+    background: transparent;
+    opacity: 0.98;
+    font-family: "JetBrains Mono Nerd Font", monospace;
+    color: #EFECE3;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.modules-center {
+    background: #000000;
+    margin-bottom: 2px;
+    padding: 0px 2px;
+    border: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 8px;
+}
+
+#workspaces {
+    background-color: @surface_container_high;
+    padding: 0px 0px 0px 0px;
+}
+
+#workspaces button {
+    padding: 0px 10px;
+    margin: 4px 2px;
+    min-width: 15px;
+    color: #F2613F;
+    background: #000000;
+    border-radius: 4px;
+    transition:
+        background 0.2s ease,
+        color       0.2s ease,
+        min-width   0.2s ease,
+        padding     0.2s ease;
+}
+#workspaces button.active {
+    padding: 0px 18px;
+    margin: 4px 2px;
+    min-width: 30px;
+    color: #000000;
+    background: #F2613F;
+    border-radius: 4px;
+    transition:
+        background 0.2s ease,
+        color       0.2s ease,
+        min-width   0.2s ease,
+        padding     0.2s ease;
+}
+#workspaces button:hover {
+    padding: 0px 10px;
+    margin: 4px 2px;
+    min-width: 50px;
+    color: #000000;
+    background: #F2613F;
+    border-radius: 4px;
+}
+
+button {
+    border: none;
+    border-radius: 0;
+
+}
+button:hover {
+    box-shadow: inherit;
+    text-shadow: inherit;
+    background: inherit;
+}
+
+#clock {
+color: #EFECE3;
+opacity: 1;
+font-weight: 600;
+font-size: 16px;
+margin: 0px 40px
+}
+
+#network {
+background: transparent;
+padding: 0px;
+padding-top: 1px;
+margin: 0px 7px 0px 7px;
+color: #F2613F;
+font-size: 18px;
+}
+
+#bluetooth {
+background: transparent;
+padding: 0px;
+padding-top: 1px;
+margin: 0px 0px 0px 7px;
+color: #F2613F;
+font-size: 18px;
+}
+
+#tray {
+margin-right: 0px;
+margin: 0px 0px 0px 7px;
+background: transparent;
+border-radius: 0px;
+}
+
+#wireplumber {
+background: transparent;
+padding: 0px;
+margin: 0px 7px 0px 9px;
+color: #EFECE3;
+opacity: 1;
+font-weight: 600;
+font-size: 16px;
+}
+
+#wireplumber:hover{
+    color:#F2613F;
+    transition: all 0.6s ease-in;
+}
+
+#custom-separator {
+margin: 0px 0px 0px 0px;
+padding-right: 2px;
+color: #EFECE3;
+opacity: 1;
+font-weight: 900;
+font-size: 14px;
+background: transparent;
+}
+
+tooltip {
+    background: #000000;
+    border: 1px solid #000000;
+}
+
+tooltip label {
+    color: #EFECE3;
+    font-weight: 600;
+}
