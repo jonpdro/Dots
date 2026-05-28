@@ -18,7 +18,7 @@ window#waybar {
 
 #workspaces {
     background-color: @surface_container_high;
-    padding: 0px 0px 0px 0px;
+    padding: 0px 20px 0px 0px;
 }
 
 #workspaces button {
@@ -72,14 +72,14 @@ color: #EFECE3;
 opacity: 1;
 font-weight: 600;
 font-size: 16px;
-margin: 0px 40px
+margin: 0px 20px;
 }
 
 #network {
 background: transparent;
 padding: 0px;
 padding-top: 1px;
-margin: 0px 7px 0px 7px;
+margin: 0px 7px 0px 20px;
 color: #F2613F;
 font-size: 18px;
 }
@@ -117,9 +117,9 @@ font-size: 16px;
 
 #custom-separator {
 margin: 0px 0px 0px 0px;
-padding-right: 2px;
+padding-right: 0px;
 color: #EFECE3;
-opacity: 1;
+opacity: 0.5;
 font-weight: 900;
 font-size: 14px;
 background: transparent;
