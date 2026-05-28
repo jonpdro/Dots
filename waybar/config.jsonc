@@ -28,12 +28,12 @@
 
 
   "custom/leftseparator": {
-    "format": " ┊",
+    "format": "┊",
     "tooltip": false
   },
 
   "custom/rightseparator": {
-    "format": "┊ ",
+    "format": "┊",
     "tooltip": false
   },
 
@@ -57,12 +57,10 @@
   "cpu": {
     "interval": 10,
     "format": "C: {usage}%",
-    "format-alt": "{icon0}{icon1}{icon2}{icon3}",
-    "format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"]
   },
 
   "wireplumber": {
-    "format": "Vol:{volume}%",
+    "format": "󰕾 {volume}%",
     "tooltip-format": "{node_name} ({volume}%)",
     "format-muted": "Vol: 0%",
     "scroll-step": 5,
