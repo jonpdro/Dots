@@ -21,7 +21,7 @@
   },
 
   "clock": {
-    "format": "{:L%A, %m/%d/%Y - %H:%M}",
+    "format": "{:L%a, %m/%d/%Y - %H:%M}",
     "tooltip": false,
     "on-click-right": "omarchy-launch-floating-terminal-with-presentation omarchy-tz-select"
   },
