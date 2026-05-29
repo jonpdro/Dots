@@ -18,14 +18,14 @@ window#waybar {
 
 #workspaces {
     background-color: @surface_container_high;
-    padding: 0px 20px 0px 0px;
+    padding: 0px 0px 0px 0px;
 }
 
 #workspaces button {
     padding: 0px 10px;
     margin: 4px 2px;
     min-width: 15px;
-    color: #F2613F;
+    color: #EFECE3;
     background: #000000;
     border-radius: 4px;
     transition:
@@ -38,7 +38,7 @@ window#waybar {
     padding: 0px 18px;
     margin: 4px 2px;
     min-width: 30px;
-    color: #000000;
+    color: #EFECE3;
     background: #F2613F;
     border-radius: 4px;
     transition:
@@ -79,7 +79,7 @@ margin: 0px 20px;
 background: transparent;
 padding: 0px;
 padding-top: 1px;
-margin: 0px 7px 0px 20px;
+margin: 0px 10px 0px 7px;
 color: #F2613F;
 font-size: 18px;
 }
@@ -88,14 +88,14 @@ font-size: 18px;
 background: transparent;
 padding: 0px;
 padding-top: 1px;
-margin: 0px 0px 0px 7px;
+margin: 0px 10px 0px 7px;
 color: #F2613F;
 font-size: 18px;
 }
 
 #tray {
 margin-right: 0px;
-margin: 0px 0px 0px 7px;
+margin: 0px 10px 0px 7px;
 background: transparent;
 border-radius: 0px;
 }
@@ -103,7 +103,7 @@ border-radius: 0px;
 #wireplumber {
 background: transparent;
 padding: 0px;
-margin: 0px 7px 0px 9px;
+margin: 0px 7px 0px 0px;
 color: #EFECE3;
 opacity: 1;
 font-weight: 600;
