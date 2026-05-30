@@ -671,6 +671,8 @@ local function register_mode_keys()
             local output = build_output()
 
             write_clipboard(output)
+            os.execute("hyprctl dispatch workspace 2")
+            os.execute("sleep 0.3 && wtype -M ctrl v -m ctrl && wtype -k return")
 
             mp.osd_message(
                 "sub-mark: copied ✓",
