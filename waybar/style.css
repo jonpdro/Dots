@@ -8,7 +8,7 @@ window#waybar {
 }
 
 .modules-center {
-    background: alpha(#000000, 0.7);
+    background: alpha(#000000, 0.8);
     margin-bottom: 2px;
     padding: 0px 2px;
     border: none;
@@ -38,8 +38,8 @@ window#waybar {
     padding: 0px 18px;
     margin: 4px 2px;
     min-width: 30px;
-    color: #EFECE3;
-    background: #F2613F;
+    color: #000000;
+    background: #D2EBCD;
     border-radius: 4px;
     transition:
         background 0.2s ease,
@@ -52,7 +52,7 @@ window#waybar {
     margin: 4px 2px;
     min-width: 50px;
     color: #000000;
-    background: #F2613F;
+    background: #D2EBCD;
     border-radius: 4px;
 }
 
@@ -68,7 +68,7 @@ button:hover {
 }
 
 #clock {
-color: #EFECE3;
+color: #D2EBCD;
 opacity: 1;
 font-weight: 600;
 font-size: 16px;
@@ -80,7 +80,7 @@ background: transparent;
 padding: 0px;
 padding-top: 1px;
 margin: 0px 10px 0px 7px;
-color: #F2613F;
+color: #D2EBCD;
 font-size: 18px;
 }
 
@@ -89,12 +89,11 @@ background: transparent;
 padding: 0px;
 padding-top: 1px;
 margin: 0px 7px 0px 7px;
-color: #F2613F;
+color: #D2EBCD;
 font-size: 18px;
 }
 
 #tray {
-margin-right: 0px;
 margin: 0px 10px 0px 7px;
 background: transparent;
 border-radius: 0px;
@@ -103,22 +102,22 @@ border-radius: 0px;
 #wireplumber {
 background: transparent;
 padding: 0px;
-margin: 0px 7px 0px 0px;
-color: #EFECE3;
+margin: 0px 7px 0px 7px;
+color: #D2EBCD;
 opacity: 1;
 font-weight: 600;
 font-size: 16px;
 }
 
 #wireplumber:hover{
-    color:#F2613F;
+    color:#FFFCEF;
     transition: all 0.6s ease-in;
 }
 
 #custom-separator {
 margin: 0px 0px 0px 0px;
 padding-right: 0px;
-color: #EFECE3;
+color: #D2EBCD;
 opacity: 0.5;
 font-weight: 900;
 font-size: 14px;
@@ -131,6 +130,6 @@ tooltip {
 }
 
 tooltip label {
-    color: #EFECE3;
+    color: #D2EBCD;
     font-weight: 600;
 }
