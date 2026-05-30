@@ -2,9 +2,9 @@
     monitor = 0
     width = (0, 500)
     height = (0, 250)
-    origin = bottom-right
+    origin = top-right
     offset = 10x10
-    notification_limit = 10
+    notification_limit = 5o
     font = Jetbrains Mono Nerd Font
     frame_width = 1
     corner_radius = 2
@@ -15,7 +15,7 @@
     padding = 8
     horizontal_padding = 12 
 
-    sort = update	
+    sort = id	
 
     # Pywal colors
     background = "#000000"
@@ -30,4 +30,4 @@
     timeout = 3
     
     [urgency_critical]
-    timeout = 10
+    timeout = 5
