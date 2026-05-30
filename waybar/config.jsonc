@@ -1,97 +1,136 @@
-{
-  "layer": "top",
-  "position": "bottom",
-  "max-height": 30,
-  "width": 1920,
-  "reload_style_on_change": true,
-  
-  "modules-center": ["hyprland/workspaces","custom/separator",  "clock" ,"custom/separator", "network", "bluetooth", "wireplumber", "custom/separator", "tray"],
+window#waybar {
+    background: transparent;
+    opacity: 0.98;
+    font-family: "JetBrains Mono Nerd Font", monospace;
+    color: #EFECE3;
+    font-size: 14px;
+    font-weight: 600;
+}
 
- "hyprland/workspaces": {
-    "disable-scroll": true,
-    "all-outputs": true,
-    "active-only": false,
-    "on-click": "activate",
-    "disable-scroll": false,
-    "on-scroll-up": "hyprctl dispatch workspace -1",
-    "on-scroll-down": "hyprctl dispatch workspace +1",
-    "persistent-workspaces": {}
-  },
+.modules-center {
+    background: alpha(#000000, 0.8);
+    margin-bottom: 2px;
+    padding: 0px 2px;
+    border: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 8px;
+}
 
-  "clock": {
-    "format": "{:L%a, %m/%d/%Y - %H:%M}",
-    "tooltip": false,
-    "on-click-right": "omarchy-launch-floating-terminal-with-presentation omarchy-tz-select"
-  },
+#workspaces {
+    background-color: @surface_container_high;
+    padding: 0px 0px 0px 0px;
+}
 
+#workspaces button {
+    padding: 0px 10px;
+    margin: 4px 2px;
+    min-width: 15px;
+    color: #EFECE3;
+    background: #000000;
+    border-radius: 4px;
+    transition:
+        background 0.2s ease,
+        color       0.2s ease,
+        min-width   0.2s ease,
+        padding     0.2s ease;
+}
+#workspaces button.active {
+    padding: 0px 18px;
+    margin: 4px 2px;
+    min-width: 30px;
+    color: #000000;
+    background: #D2EBCD;
+    border-radius: 4px;
+    transition:
+        background 0.2s ease,
+        color       0.2s ease,
+        min-width   0.2s ease,
+        padding     0.2s ease;
+}
+#workspaces button:hover {
+    padding: 0px 10px;
+    margin: 4px 2px;
+    min-width: 50px;
+    color: #000000;
+    background: #D2EBCD;
+    border-radius: 4px;
+}
 
-  "custom/separator": {
-    "format": "┊",
-    "tooltip": false
-  },
+button {
+    border: none;
+    border-radius: 0;
 
-  "memory": {
-    "states": {
-      "c": 90,
-      "h": 60,
-      "m": 30
-    },
-    "interval": 10,
-    "format": "M: {used}GB",
-    "format-m": "M: {used}GB",
-    "format-h": "M: {used}GB",
-    "format-c": "M: {used}GB",
-    "format-alt": "M: {percentage}%",
-    "max-length": 10,
-    "tooltip": true,
-    "tooltip-format": "{used:0.1f}GB/{total:0.1f}GB"
-  },
+}
+button:hover {
+    box-shadow: inherit;
+    text-shadow: inherit;
+    background: inherit;
+}
 
-  "cpu": {
-    "interval": 10,
-    "format": "C: {usage}%",
-  },
+#clock {
+color: #D2EBCD;
+opacity: 1;
+font-weight: 600;
+font-size: 16px;
+margin: 0px 20px;
+}
 
-  "wireplumber": {
-    "format": "󰕾 {volume}%",
-    "tooltip-format": "{node_name} ({volume}%)",
-    "format-muted": "Vol: 0%",
-    "scroll-step": 5,
-    "on-click": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0%",
-    "on-click-right": "/home/jon/.config/hypr/scripts/wiremix.sh",
-    "on-click-middle": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 100%"
-  },
+#network {
+background: transparent;
+padding: 0px;
+padding-top: 1px;
+margin: 0px 10px 0px 7px;
+color: #D2EBCD;
+font-size: 18px;
+}
 
-  "network": {
-    "format": "󱛆",
-    "format-disconnected": "󱛆",
-    "format-disabled": "󰖪",
-    "format-wifi": "󰖩",
-    "format-ethernet": "󰈀",
-    "tooltip-format": "Right-click to connect.",
-    "tooltip-format-disabled": "Network disabled.",
-    "tooltip-format-disconnected": "Right-click to connect.",
-    "tooltip-format-wifi": "{essid} ({frequency} GHz)\n⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
-    "tooltip-format-ethernet": "⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
-    "interval": 3,
-    "spacing": 1,
-    "on-click": "rfkill toggle wifi",
-    "on-click-right": "/home/jon/.config/hypr/scripts/impala.sh"
-  },
+#bluetooth {
+background: transparent;
+padding: 0px;
+padding-top: 1px;
+margin: 0px 7px 0px 7px;
+color: #D2EBCD;
+font-size: 18px;
+}
 
-  "bluetooth": {
-    "format": "󰂳",
-    "format-disabled": "󰂲",
-    "format-connected": "󰂱",
-    "tooltip-format": "Right-click to connect.",
-    "tooltip-format-disabled": "Bluetooth off.",
-    "tooltip-format-connected": " {device_alias} ({device_battery_percentage}% 󰥉) ",
-    "on-click": "rfkill toggle bluetooth",
-    "on-click-right": "/home/jon/.config/hypr/scripts/bluetuith.sh"
-  },
+#tray {
+margin-right: 0px;
+margin: 0px 7px 0px 7px;
+background: transparent;
+border-radius: 0px;
+}
 
-  "tray": {
-    "icon-size": 18,
-    "spacing": 10
-  }
+#wireplumber {
+background: transparent;
+padding: 0px;
+margin: 0px 7px 0px 7px;
+color: #D2EBCD;
+opacity: 1;
+font-weight: 600;
+font-size: 16px;
+}
+
+#wireplumber:hover{
+    color:#FFFCEF;
+    transition: all 0.6s ease-in;
+}
+
+#custom-separator {
+margin: 0px 0px 0px 0px;
+padding-right: 0px;
+color: #D2EBCD;
+opacity: 0.5;
+font-weight: 900;
+font-size: 14px;
+background: transparent;
+}
+
+tooltip {
+    background: #000000;
+    border: 1px solid #000000;
+}
+
+tooltip label {
+    color: #D2EBCD;
+    font-weight: 600;
 }
