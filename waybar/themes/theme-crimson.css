@@ -1,0 +1,9 @@
+/* ─── Crimson ─────────────────────────────────────────────── */
+
+@define-color accent       #FF4D5A;
+@define-color accent_dim   #2A0006;
+@define-color text_primary #FFD8DB;
+@define-color text_muted   rgba(255, 216, 219, 0.35);
+@define-color separator    rgba(255, 77, 90, 0.40);
+@define-color tooltip_text #FFD8DB;
+@define-color border_top   rgba(255, 77, 90, 0.18);

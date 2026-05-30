@@ -1,0 +1,9 @@
+/* ─── Inferno Red ─────────────────────────────────────────── */
+
+@define-color accent       #FF2D55;
+@define-color accent_dim   #2A000A;
+@define-color text_primary #FFD6DF;
+@define-color text_muted   rgba(255, 214, 223, 0.35);
+@define-color separator    rgba(255, 45, 85, 0.45);
+@define-color tooltip_text #FFE4EA;
+@define-color border_top   rgba(255, 45, 85, 0.25);

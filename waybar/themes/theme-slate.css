@@ -1,0 +1,11 @@
+/* ─── Slate ──────────────────────────────────────────────────
+   accent : #7AA8C9   hover-bg : #0D1E2E   text : #DAE9F6
+   ──────────────────────────────────────────────────────── */
+
+@define-color accent       #7AA8C9;
+@define-color accent_dim   #0D1E2E;
+@define-color text_primary #DAE9F6;
+@define-color text_muted   rgba(218, 233, 246, 0.35);
+@define-color separator    rgba(122, 168, 201, 0.4);
+@define-color tooltip_text #DAE9F6;
+@define-color border_top   rgba(122, 168, 201, 0.18);

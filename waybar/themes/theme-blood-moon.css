@@ -1,0 +1,9 @@
+/* ─── Blood Moon ──────────────────────────────────────────── */
+
+@define-color accent       #FF1744;
+@define-color accent_dim   #180003;
+@define-color text_primary #FFD9DF;
+@define-color text_muted   rgba(255, 217, 223, 0.35);
+@define-color separator    rgba(255, 23, 68, 0.45);
+@define-color tooltip_text #FFD9DF;
+@define-color border_top   rgba(255, 23, 68, 0.25);

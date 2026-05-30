@@ -1,0 +1,9 @@
+/* ─── Gold ────────────────────────────────────────────────── */
+
+@define-color accent       #F6C945;
+@define-color accent_dim   #2A1D00;
+@define-color text_primary #FFF1C4;
+@define-color text_muted   rgba(255, 241, 196, 0.35);
+@define-color separator    rgba(246, 201, 69, 0.40);
+@define-color tooltip_text #FFF1C4;
+@define-color border_top   rgba(246, 201, 69, 0.18);

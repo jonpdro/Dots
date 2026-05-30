@@ -1,0 +1,11 @@
+/* ─── Moss ───────────────────────────────────────────────────
+   accent : #85C26A   hover-bg : #122208   text : #D8F0CC
+   ──────────────────────────────────────────────────────── */
+
+@define-color accent       #85C26A;
+@define-color accent_dim   #122208;
+@define-color text_primary #D8F0CC;
+@define-color text_muted   rgba(216, 240, 204, 0.35);
+@define-color separator    rgba(133, 194, 106, 0.4);
+@define-color tooltip_text #D8F0CC;
+@define-color border_top   rgba(133, 194, 106, 0.18);

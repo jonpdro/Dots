@@ -1,0 +1,9 @@
+/* ─── Ice ─────────────────────────────────────────────────── */
+
+@define-color accent       #7DD3FC;
+@define-color accent_dim   #071C28;
+@define-color text_primary #E0F6FF;
+@define-color text_muted   rgba(224, 246, 255, 0.35);
+@define-color separator    rgba(125, 211, 252, 0.40);
+@define-color tooltip_text #E0F6FF;
+@define-color border_top   rgba(125, 211, 252, 0.18);

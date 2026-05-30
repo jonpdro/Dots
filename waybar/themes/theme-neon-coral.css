@@ -1,0 +1,11 @@
+/* ─── Neon coral ─────────────────────────────────────────────
+   accent : #FF5F6E   hover-bg : #2A0A0E   text : #FFDDE0
+   ──────────────────────────────────────────────────────── */
+
+@define-color accent       #FF5F6E;
+@define-color accent_dim   #2A0A0E;
+@define-color text_primary #FFDDE0;
+@define-color text_muted   rgba(255, 221, 224, 0.35);
+@define-color separator    rgba(255, 95, 110, 0.4);
+@define-color tooltip_text #FFDDE0;
+@define-color border_top   rgba(255, 95, 110, 0.18);

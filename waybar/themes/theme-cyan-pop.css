@@ -1,0 +1,11 @@
+/* ─── Cyan pop ───────────────────────────────────────────────
+   accent : #00D4E8   hover-bg : #002028   text : #C0F8FF
+   ──────────────────────────────────────────────────────── */
+
+@define-color accent       #00D4E8;
+@define-color accent_dim   #002028;
+@define-color text_primary #C0F8FF;
+@define-color text_muted   rgba(192, 248, 255, 0.35);
+@define-color separator    rgba(0, 212, 232, 0.4);
+@define-color tooltip_text #C0F8FF;
+@define-color border_top   rgba(0, 212, 232, 0.18);

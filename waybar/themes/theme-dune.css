@@ -1,0 +1,11 @@
+/* ─── Dune ───────────────────────────────────────────────────
+   accent : #D4B483   hover-bg : #251D0D   text : #F5EAD8
+   ──────────────────────────────────────────────────────── */
+
+@define-color accent       #D4B483;
+@define-color accent_dim   #251D0D;
+@define-color text_primary #F5EAD8;
+@define-color text_muted   rgba(245, 234, 216, 0.35);
+@define-color separator    rgba(212, 180, 131, 0.4);
+@define-color tooltip_text #F5EAD8;
+@define-color border_top   rgba(212, 180, 131, 0.18);

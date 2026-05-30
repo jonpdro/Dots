@@ -1,0 +1,9 @@
+/* ─── Monochrome ───────────────────────────────────────────── */
+
+@define-color accent       #FFFFFF;
+@define-color accent_dim   #202020;
+@define-color text_primary #E6E6E6;
+@define-color text_muted   rgba(230, 230, 230, 0.35);
+@define-color separator    rgba(255, 255, 255, 0.25);
+@define-color tooltip_text #FFFFFF;
+@define-color border_top   rgba(255, 255, 255, 0.15);

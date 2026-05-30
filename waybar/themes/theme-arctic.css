@@ -1,0 +1,11 @@
+/* ─── Arctic ────────────────────────────────────────────────
+   accent : #5EC4E8   hover-bg : #1C3A47   text : #FFFFFF
+   ──────────────────────────────────────────────────────── */
+
+@define-color accent       #5EC4E8;
+@define-color accent_dim   #1C3A47;
+@define-color text_primary #FFFFFF;
+@define-color text_muted   rgba(255, 255, 255, 0.35);
+@define-color separator    rgba(94, 196, 232, 0.4);
+@define-color tooltip_text #D6F4FF;
+@define-color border_top   rgba(94, 196, 232, 0.18);

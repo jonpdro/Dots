@@ -1,0 +1,11 @@
+/* ─── Volt ───────────────────────────────────────────────────
+   accent : #B8F730   hover-bg : #1A2800   text : #EAFFC0
+   ──────────────────────────────────────────────────────── */
+
+@define-color accent       #B8F730;
+@define-color accent_dim   #1A2800;
+@define-color text_primary #EAFFC0;
+@define-color text_muted   rgba(234, 255, 192, 0.35);
+@define-color separator    rgba(184, 247, 48, 0.4);
+@define-color tooltip_text #EAFFC0;
+@define-color border_top   rgba(184, 247, 48, 0.18);

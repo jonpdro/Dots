@@ -1,0 +1,9 @@
+/* ─── Orchid ──────────────────────────────────────────────── */
+
+@define-color accent       #C084FC;
+@define-color accent_dim   #1F0A2B;
+@define-color text_primary #F1E0FF;
+@define-color text_muted   rgba(241, 224, 255, 0.35);
+@define-color separator    rgba(192, 132, 252, 0.40);
+@define-color tooltip_text #F1E0FF;
+@define-color border_top   rgba(192, 132, 252, 0.18);

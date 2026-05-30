@@ -1,0 +1,11 @@
+/* ─── Rust ───────────────────────────────────────────────────
+   accent : #C76B44   hover-bg : #200E06   text : #F5D9CC
+   ──────────────────────────────────────────────────────── */
+
+@define-color accent       #C76B44;
+@define-color accent_dim   #200E06;
+@define-color text_primary #F5D9CC;
+@define-color text_muted   rgba(245, 217, 204, 0.35);
+@define-color separator    rgba(199, 107, 68, 0.4);
+@define-color tooltip_text #F5D9CC;
+@define-color border_top   rgba(199, 107, 68, 0.18);

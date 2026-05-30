@@ -1,0 +1,9 @@
+/* ─── Tangerine ───────────────────────────────────────────── */
+
+@define-color accent       #FF9F43;
+@define-color accent_dim   #2B1300;
+@define-color text_primary #FFE5CC;
+@define-color text_muted   rgba(255, 229, 204, 0.35);
+@define-color separator    rgba(255, 159, 67, 0.40);
+@define-color tooltip_text #FFE5CC;
+@define-color border_top   rgba(255, 159, 67, 0.18);

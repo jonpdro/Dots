@@ -1,0 +1,11 @@
+/* ─── Sakura ─────────────────────────────────────────────────
+   accent : #F07AAA   hover-bg : #2A0F1C   text : #FCE0EC
+   ──────────────────────────────────────────────────────── */
+
+@define-color accent       #F07AAA;
+@define-color accent_dim   #2A0F1C;
+@define-color text_primary #FCE0EC;
+@define-color text_muted   rgba(252, 224, 236, 0.35);
+@define-color separator    rgba(240, 122, 170, 0.4);
+@define-color tooltip_text #FCE0EC;
+@define-color border_top   rgba(240, 122, 170, 0.18);

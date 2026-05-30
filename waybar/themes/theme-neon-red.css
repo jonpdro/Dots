@@ -1,0 +1,9 @@
+/* ─── Neon Red ────────────────────────────────────────────── */
+
+@define-color accent       #FF003C;
+@define-color accent_dim   #220008;
+@define-color text_primary #FFE0E7;
+@define-color text_muted   rgba(255, 224, 231, 0.35);
+@define-color separator    rgba(255, 0, 60, 0.50);
+@define-color tooltip_text #FFE0E7;
+@define-color border_top   rgba(255, 0, 60, 0.30);

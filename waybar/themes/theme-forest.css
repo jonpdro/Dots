@@ -1,0 +1,9 @@
+/* ─── Forest ──────────────────────────────────────────────── */
+
+@define-color accent       #4ADE80;
+@define-color accent_dim   #062011;
+@define-color text_primary #D7FFE6;
+@define-color text_muted   rgba(215, 255, 230, 0.35);
+@define-color separator    rgba(74, 222, 128, 0.40);
+@define-color tooltip_text #D7FFE6;
+@define-color border_top   rgba(74, 222, 128, 0.18);

@@ -1,0 +1,11 @@
+/* ─── Lavender Dusk ──────────────────────────────────────────
+   accent : #C9A6FF   hover-bg : #1E0F35   text : #EDE0FF
+   ──────────────────────────────────────────────────────── */
+
+@define-color accent       #C9A6FF;
+@define-color accent_dim   #1E0F35;
+@define-color text_primary #EDE0FF;
+@define-color text_muted   rgba(237, 224, 255, 0.35);
+@define-color separator    rgba(201, 166, 255, 0.4);
+@define-color tooltip_text #EDE0FF;
+@define-color border_top   rgba(201, 166, 255, 0.18);

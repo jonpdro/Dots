@@ -1,0 +1,11 @@
+/* ─── Gold ───────────────────────────────────────────────────
+   accent : #F5C842   hover-bg : #221A00   text : #FFF5CC
+   ──────────────────────────────────────────────────────── */
+
+@define-color accent       #F5C842;
+@define-color accent_dim   #221A00;
+@define-color text_primary #FFF5CC;
+@define-color text_muted   rgba(255, 245, 204, 0.35);
+@define-color separator    rgba(245, 200, 66, 0.4);
+@define-color tooltip_text #FFF5CC;
+@define-color border_top   rgba(245, 200, 66, 0.18);

@@ -1,0 +1,11 @@
+/* ─── Hyper violet ───────────────────────────────────────────
+   accent : #A855F7   hover-bg : #1A0030   text : #EDD9FF
+   ──────────────────────────────────────────────────────── */
+
+@define-color accent       #A855F7;
+@define-color accent_dim   #1A0030;
+@define-color text_primary #EDD9FF;
+@define-color text_muted   rgba(237, 217, 255, 0.35);
+@define-color separator    rgba(168, 85, 247, 0.4);
+@define-color tooltip_text #EDD9FF;
+@define-color border_top   rgba(168, 85, 247, 0.18);

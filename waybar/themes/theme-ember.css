@@ -1,0 +1,11 @@
+/* ─── Ember ─────────────────────────────────────────────────
+   accent : #F4933A   hover-bg : #2E1D0A   text : #FDE8CF
+   ──────────────────────────────────────────────────────── */
+
+@define-color accent       #F4933A;
+@define-color accent_dim   #2E1D0A;
+@define-color text_primary #FDE8CF;
+@define-color text_muted   rgba(253, 232, 207, 0.35);
+@define-color separator    rgba(244, 147, 58, 0.4);
+@define-color tooltip_text #FDE8CF;
+@define-color border_top   rgba(244, 147, 58, 0.18);
