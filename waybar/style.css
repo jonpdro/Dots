@@ -1,8 +1,13 @@
+@import "/home/jon/.config/waybar/themes/theme-volt.css";
+
+
+/* ── Base ─────────────────────────────────────────────────── */
+
 window#waybar {
     background: transparent;
     opacity: 0.98;
     font-family: "JetBrains Mono Nerd Font", monospace;
-    color: #EFECE3;
+    color: @text_primary;
     font-size: 14px;
     font-weight: 600;
 }
@@ -12,20 +17,24 @@ window#waybar {
     margin-bottom: 2px;
     padding: 0px 2px;
     border: none;
-    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    border-top: 1px solid @border_top;
     border-radius: 8px;
 }
 
+
+/* ── Workspaces ───────────────────────────────────────────── */
+
 #workspaces {
-    background-color: @surface_container_high;
-    padding: 0px 0px 0px 0px;
+    background-color: transparent;
+    padding: 0px;
 }
 
 #workspaces button {
     padding: 0px 10px;
     margin: 4px 2px;
     min-width: 15px;
-    color: #EFECE3;
+    color: @text_muted;
+    font-weight: 900;
     background: #000000;
     border-radius: 4px;
     transition:
@@ -34,12 +43,13 @@ window#waybar {
         min-width   0.2s ease,
         padding     0.2s ease;
 }
+
 #workspaces button.active {
     padding: 0px 18px;
     margin: 4px 2px;
     min-width: 30px;
     color: #000000;
-    background: #D2EBCD;
+    background: @accent;
     border-radius: 4px;
     transition:
         background 0.2s ease,
@@ -47,89 +57,99 @@ window#waybar {
         min-width   0.2s ease,
         padding     0.2s ease;
 }
+
 #workspaces button:hover {
     padding: 0px 10px;
     margin: 4px 2px;
     min-width: 50px;
-    color: #000000;
-    background: #D2EBCD;
+    color: @accent;
+    background: @accent_dim;
     border-radius: 4px;
 }
+
+
+/* ── Button reset ─────────────────────────────────────────── */
 
 button {
     border: none;
     border-radius: 0;
-
 }
+
 button:hover {
     box-shadow: inherit;
     text-shadow: inherit;
     background: inherit;
 }
 
+
+/* ── Modules ──────────────────────────────────────────────── */
+
 #clock {
-color: #D2EBCD;
-opacity: 1;
-font-weight: 600;
-font-size: 16px;
-margin: 0px 20px;
+    color: @accent;
+    opacity: 1;
+    font-weight: 700;
+    font-size: 16px;
+    margin: 0px 20px;
 }
 
 #network {
-background: transparent;
-padding: 0px;
-padding-top: 1px;
-margin: 0px 10px 0px 7px;
-color: #D2EBCD;
-font-size: 18px;
+    background: transparent;
+    padding: 0px;
+    padding-top: 1px;
+    margin: 0px 10px 0px 7px;
+    color: @text_primary;
+    font-size: 18px;
 }
 
 #bluetooth {
-background: transparent;
-padding: 0px;
-padding-top: 1px;
-margin: 0px 7px 0px 7px;
-color: #D2EBCD;
-font-size: 18px;
+    background: transparent;
+    padding: 0px;
+    padding-top: 1px;
+    margin: 0px 7px 0px 7px;
+    color: @text_primary;
+    font-size: 18px;
 }
 
 #tray {
-margin: 0px 10px 0px 7px;
-background: transparent;
-border-radius: 0px;
+    margin: 0px 10px 0px 7px;
+    background: transparent;
+    border-radius: 0px;
 }
 
 #wireplumber {
-background: transparent;
-padding: 0px;
-margin: 0px 7px 0px 7px;
-color: #D2EBCD;
-opacity: 1;
-font-weight: 600;
-font-size: 18px;
+    background: transparent;
+    padding: 0px;
+    margin: 0px 7px 0px 7px;
+    color: @text_primary;
+    opacity: 1;
+    font-weight: 600;
+    font-size: 18px;
 }
 
-#wireplumber:hover{
-    color:#FFFCEF;
+#wireplumber:hover {
+    color: @accent;
     transition: all 0.6s ease-in;
 }
 
 #custom-separator {
-margin: 0px 0px 0px 0px;
-padding-right: 0px;
-color: #D2EBCD;
-opacity: 0.5;
-font-weight: 900;
-font-size: 14px;
-background: transparent;
+    margin: 0px;
+    padding-right: 0px;
+    color: @separator;
+    opacity: 1;
+    font-weight: 900;
+    font-size: 14px;
+    background: transparent;
 }
+
+
+/* ── Tooltip ──────────────────────────────────────────────── */
 
 tooltip {
     background: #000000;
-    border: 1px solid #000000;
+    border: 1px solid @accent_dim;
 }
 
 tooltip label {
-    color: #D2EBCD;
+    color: @tooltip_text;
     font-weight: 600;
 }
